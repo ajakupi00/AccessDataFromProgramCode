@@ -1,0 +1,12 @@
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\bin\Debug\PPPK_SSMS.exe.config
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\bin\Debug\PPPK_SSMS.exe
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\bin\Debug\PPPK_SSMS.pdb
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.csproj.AssemblyReference.cache
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.csproj.SuggestedBindingRedirects.cache
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.Properties.Resources.resources
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.csproj.GenerateResource.cache
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.csproj.CoreCompileInputs.cache
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.exe
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.pdb
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.Login.resources
+C:\Users\arjan\source\repos\PPPK_I4\PPPK_SSMS\obj\Debug\PPPK_SSMS.Main.resources
