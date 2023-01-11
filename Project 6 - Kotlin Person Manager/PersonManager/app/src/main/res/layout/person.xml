@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="?colorPrimary"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/radius">
+
+    <LinearLayout
+        android:padding="@dimen/personPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/ivImage"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/imageHeight" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            tools:text="Robert me Diro"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:src="@drawable/delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/deleteHeight" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
