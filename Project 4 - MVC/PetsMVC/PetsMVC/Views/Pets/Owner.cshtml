@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PetsMVC.Pets>
+
+@{
+    ViewBag.Title = "Pets";
+}
+
+<h2>Owner</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Pet's name
+        </th>
+        <th>
+            Owner's name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.People.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDPet }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDPet }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDPet })
+        </td>
+    </tr>
+}
+
+</table>

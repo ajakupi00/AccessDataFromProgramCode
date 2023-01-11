@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PPPK_MVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="IDFile" />
+    </Key>
+    <Property Name="IDFile" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContentType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="PetIDPet" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pets" Relationship="Self.FK_PetFile" FromRole="Files" ToRole="Pets" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="IDPerson" />
+    </Key>
+    <Property Name="IDPerson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pets" Relationship="Self.FK_PersonPet" FromRole="People" ToRole="Pets" />
+  </EntityType>
+  <EntityType Name="Pets">
+    <Key>
+      <PropertyRef Name="IDPet" />
+    </Key>
+    <Property Name="IDPet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonIDPerson" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_PetFile" FromRole="Pets" ToRole="Files" />
+    <NavigationProperty Name="People" Relationship="Self.FK_PersonPet" FromRole="Pets" ToRole="People" />
+  </EntityType>
+  <Association Name="FK_PetFile">
+    <End Role="Pets" Type="Self.Pets" Multiplicity="1" />
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pets">
+        <PropertyRef Name="IDPet" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="PetIDPet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPet">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Pets" Type="Self.Pets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="IDPerson" />
+      </Principal>
+      <Dependent Role="Pets">
+        <PropertyRef Name="PersonIDPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PPPK_MVCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Files" EntityType="Self.Files" />
+    <EntitySet Name="People" EntityType="Self.People" />
+    <EntitySet Name="Pets" EntityType="Self.Pets" />
+    <AssociationSet Name="FK_PetFile" Association="Self.FK_PetFile">
+      <End Role="Pets" EntitySet="Pets" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPet" Association="Self.FK_PersonPet">
+      <End Role="People" EntitySet="People" />
+      <End Role="Pets" EntitySet="Pets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

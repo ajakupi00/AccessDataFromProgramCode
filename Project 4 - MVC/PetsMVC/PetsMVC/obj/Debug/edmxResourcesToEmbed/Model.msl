@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PPPK_MVCModelStoreContainer" CdmEntityContainer="PPPK_MVCEntities">
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="PPPK_MVCModel.Files">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="IDFile" ColumnName="IDFile" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PetIDPet" ColumnName="PetIDPet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="PPPK_MVCModel.People">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="IDPerson" ColumnName="IDPerson" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pets">
+      <EntityTypeMapping TypeName="PPPK_MVCModel.Pets">
+        <MappingFragment StoreEntitySet="Pets">
+          <ScalarProperty Name="IDPet" ColumnName="IDPet" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PersonIDPerson" ColumnName="PersonIDPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
