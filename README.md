@@ -1,4 +1,3 @@
-# Access Data From Program Code 
 # Pristup Podacima iz Programskog Koda - PPPK
 
 ## Overview
